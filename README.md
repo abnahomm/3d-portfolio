@@ -1,16 +1,38 @@
-# React + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive 3D portfolio where visitors can explore my work inside a virtual room instead of scrolling through a traditional website.
 
-Currently, two official plugins are available:
+Each screen in the room highlights different projects, experience, and links to my work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+Best viewed on desktop.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://your-portfolio-link.com
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Interactive 3D environment
+- Project showcase screens
+- Experience panel
+- About section
+- Links to GitHub, LinkedIn, and resume
+
+## Projects Featured
+
+- Physical Intrusion Detection System  
+- Homelab Network Environment  
+- Weather API Application  
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- Three.js / React Three Fiber
+- CSS
+
+## Installation
+
+Clone the repository
+
