@@ -134,12 +134,12 @@ function MusicWidget() {
   ];
 
   const rotationTracks = [
-    { title: "IF I WASN'T RAPPING", artist: "Concrete Boys", cover: "/covers/concrete.jpg" },
-    { title: "Heights", artist: "Swapa", cover: "/covers/swapa.jpg" },
-    { title: "The Less I Know The Better", artist: "Tame Impala", cover: "/covers/tame.jpg" },
-    { title: "Charlie, Last Name Wilson", artist: "Charlie Wilson", cover: "/covers/charlie.jpg" },
-    { title: "FourFiveSeconds", artist: "Rihanna feat. Kanye West", cover: "/covers/fourfive.jpg" },
-  ];
+  { title: "Nothing", artist: "Steve Lacy", cover: "/covers/lacy.jpg" },
+  { title: "Choosin' Texas Remix", artist: "Drake", cover: "/covers/fomo.jpg" },
+  { title: "Incomplete Kisses", artist: "Sampha", cover: "/covers/sampha.jpg" },
+  { title: "Forrest Gump", artist: "Frank Ocean", cover: "/covers/channelo.jpg" },
+  { title: "Gen 5", artist: "Drake", cover: "/covers/gen5.jpg" },
+];
 
   const [trackIndex, setTrackIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
