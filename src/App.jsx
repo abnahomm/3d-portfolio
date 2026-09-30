@@ -10,13 +10,14 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from "react-icons/fa";
 import "./index.css";
+const BASE = import.meta.env.BASE_URL;
 
 function Room() {
-  const { scene } = useGLTF("/room.glb");
+  const { scene } = useGLTF(`${BASE}room.glb`);
   return <primitive object={scene} scale={0.82} position={[0, -1.35, 0]} />;
 }
 
-useGLTF.preload("/room.glb");
+useGLTF.preload(`${BASE}room.glb`);
 
 function VideoPlane({ src, position, rotation, scale }) {
   const texture = useVideoTexture(src, {
@@ -102,7 +103,7 @@ function SocialLinks() {
       </a>
 
       <a
-        href="/resume.pdf"
+        href={`${BASE}resume.pdf`}
         target="_blank"
         rel="noreferrer"
         className="social-icon-btn"
@@ -116,31 +117,31 @@ function SocialLinks() {
 
 function MusicWidget() {
   const playlist = [
-    { title: "Cyanide", artist: "Daniel Caesar", file: "/music/Cyanide.mp3", cover: "/covers/DC.jpg" },
-    { title: "Can I", artist: "Drake", file: "/music/Can I.mp3", cover: "/covers/Drake.jpg" },
-    { title: "I Wanna Be Down", artist: "Brandy", file: "/music/I Wanna Be Down.mp3", cover: "/covers/Brandy.jpg" },
-    { title: "FOREVER PT.2", artist: "BKTHERULA ft. Destroy Lonely", file: "/music/FOREVER PT.2.mp3", cover: "/covers/BK.jpg" },
-    { title: "Sacrifice", artist: "Mariah the Scientist", file: "/music/Sacrifice.mp3", cover: "/covers/Mariah.jpg" },
-    { title: "Provider", artist: "Frank Ocean", file: "/music/Provider.mp3", cover: "/covers/Frank.jpg" },
-    { title: "Greedy", artist: "PARTYNEXTDOOR & Drake", file: "/music/Greedy.mp3", cover: "/covers/PND.jpg" },
-    { title: "Both Sides Of The Moon", artist: "Celeste & Gotts Street Park", file: "/music/Both Sides Of The Moon.mp3", cover: "/covers/Celeste.jpg" },
-    { title: "Softly", artist: "Clairo", file: "/music/Softly.mp3", cover: "/covers/clairo.jpg" },
-    { title: "Finest", artist: "YoungBoy Never Broke Again", file: "/music/Finest.mp3", cover: "/covers/YB.jpg" },
-    { title: "Cayendo (side A - Acoustic)", artist: "Frank Ocean", file: "/music/Cayendo (side A - Acoustic).mp3", cover: "/covers/Franks.jpg" },
-    { title: "Oh My Baby", artist: "Babystaydown", file: "/music/Oh My Baby.mp3", cover: "/covers/Baby.jpg" },
-    { title: "Bet", artist: "Mereba", file: "/music/Bet.mp3", cover: "/covers/Mereba.jpg" },
-    { title: "N 2 Deep", artist: "Drake ft. Future", file: "/music/N 2 Deep.mp3", cover: "/covers/Drakes.jpg" },
-
-  ];
-
-  const rotationTracks = [
-  { title: "Nothing", artist: "Steve Lacy", cover: "/covers/lacy.jpg" },
-  { title: "Choosin' Texas Remix", artist: "Drake", cover: "/covers/fomo.jpg" },
-  { title: "Incomplete Kisses", artist: "Sampha", cover: "/covers/sampha.jpg" },
-  { title: "Forrest Gump", artist: "Frank Ocean", cover: "/covers/channelo.jpg" },
-  { title: "Gen 5", artist: "Drake", cover: "/covers/gen5.jpg" },
+    const playlist = [
+  { title: "Cyanide", artist: "Daniel Caesar", file: `${BASE}music/Cyanide.mp3`, cover: `${BASE}covers/DC.jpg` },
+  { title: "Can I", artist: "Drake", file: `${BASE}music/Can I.mp3`, cover: `${BASE}covers/Drake.jpg` },
+  { title: "I Wanna Be Down", artist: "Brandy", file: `${BASE}music/I Wanna Be Down.mp3`, cover: `${BASE}covers/Brandy.jpg` },
+  { title: "FOREVER PT.2", artist: "BKTHERULA ft. Destroy Lonely", file: `${BASE}music/FOREVER PT.2.mp3`, cover: `${BASE}covers/BK.jpg` },
+  { title: "Sacrifice", artist: "Mariah the Scientist", file: `${BASE}music/Sacrifice.mp3`, cover: `${BASE}covers/Mariah.jpg` },
+  { title: "Provider", artist: "Frank Ocean", file: `${BASE}music/Provider.mp3`, cover: `${BASE}covers/Frank.jpg` },
+  { title: "Greedy", artist: "PARTYNEXTDOOR & Drake", file: `${BASE}music/Greedy.mp3`, cover: `${BASE}covers/PND.jpg` },
+  { title: "Both Sides Of The Moon", artist: "Celeste & Gotts Street Park", file: `${BASE}music/Both Sides Of The Moon.mp3`, cover: `${BASE}covers/Celeste.jpg` },
+  { title: "Softly", artist: "Clairo", file: `${BASE}music/Softly.mp3`, cover: `${BASE}covers/clairo.jpg` },
+  { title: "Finest", artist: "YoungBoy Never Broke Again", file: `${BASE}music/Finest.mp3`, cover: `${BASE}covers/YB.jpg` },
+  { title: "Cayendo (side A - Acoustic)", artist: "Frank Ocean", file: `${BASE}music/Cayendo (side A - Acoustic).mp3`, cover: `${BASE}covers/Franks.jpg` },
+  { title: "Oh My Baby", artist: "Babystaydown", file: `${BASE}music/Oh My Baby.mp3`, cover: `${BASE}covers/Baby.jpg` },
+  { title: "Bet", artist: "Mereba", file: `${BASE}music/Bet.mp3`, cover: `${BASE}covers/Mereba.jpg` },
+  { title: "N 2 Deep", artist: "Drake ft. Future", file: `${BASE}music/N 2 Deep.mp3`, cover: `${BASE}covers/Drakes.jpg` },
 ];
 
+const rotationTracks = [
+  { title: "Nothing", artist: "Steve Lacy", cover: `${BASE}covers/lacy.jpg` },
+  { title: "Choosin' Texas Remix", artist: "Drake", cover: `${BASE}covers/fomo.jpg` },
+  { title: "Incomplete Kisses", artist: "Sampha", cover: `${BASE}covers/sampha.jpg` },
+  { title: "Forrest Gump", artist: "Frank Ocean", cover: `${BASE}covers/channelo.jpg` },
+  { title: "Gen 5", artist: "Drake", cover: `${BASE}covers/imspent.jpg` },
+];
+  
   const [trackIndex, setTrackIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -344,7 +345,7 @@ function FloatingPanel({ activeTab, onClose }) {
       content: (
         <div className="panel-about-grid">
           <div className="panel-about-left">
-            <img className="panel-profile-photo" src="/nahoma.jpg" alt="Nahom Abraham" />
+            <img className="panel-profile-photo" src={`${BASE}nahoma.jpg`} alt="Nahom Abraham" />
           </div>
 
           <div className="panel-about-right">
@@ -494,7 +495,7 @@ function FloatingPanel({ activeTab, onClose }) {
           <a href="https://github.com/abnahomm" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer">
+          <a href={`${BASE}resume.pdf`} target="_blank" rel="noreferrer">
             Resume
           </a>
         </div>
@@ -543,21 +544,21 @@ export default function App() {
             <Environment preset="studio" background={false} />
 
             <VideoPlane
-              src="/videos/bron.mp4"
+              src={`${BASE}videos/bron.mp4`}
               position={[-2.19, 0.54, 0.78]}
               rotation={[0, 1.42, 0]}
               scale={[0.74, 0.43, 1]}
             />
 
             <VideoPlane
-              src="/videos/hack.mp4"
+              src={`${BASE}videos/hack.mp4`}
               position={[-2.19, 0.54, 1.34]}
               rotation={[0, 1.9, 0]}
               scale={[1.07, 0.43, 1]}
             />
 
             <VideoPlane
-              src="/videos/ufc.mp4"
+              src={`${BASE}videos/ufc.mp4`}
               position={[-2.2, 1.95, -2.6]}
               rotation={[0.2, 0.55, 0]}
               scale={[0.87, 0.55, 1]}
