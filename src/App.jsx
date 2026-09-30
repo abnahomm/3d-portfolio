@@ -117,18 +117,17 @@ function SocialLinks() {
 
 function MusicWidget() {
     const playlist = [
+  { title: "Nothing", artist: "Steve Lacy", file: `${BASE}music/Nothing.mp3`, cover: `${BASE}covers/lacy.jpg` },
   { title: "Cyanide", artist: "Daniel Caesar", file: `${BASE}music/Cyanide.mp3`, cover: `${BASE}covers/DC.jpg` },
   { title: "Can I", artist: "Drake", file: `${BASE}music/Can I.mp3`, cover: `${BASE}covers/Drake.jpg` },
   { title: "I Wanna Be Down", artist: "Brandy", file: `${BASE}music/I Wanna Be Down.mp3`, cover: `${BASE}covers/Brandy.jpg` },
-  { title: "FOREVER PT.2", artist: "BKTHERULA ft. Destroy Lonely", file: `${BASE}music/FOREVER PT.2.mp3`, cover: `${BASE}covers/BK.jpg` },
   { title: "Sacrifice", artist: "Mariah the Scientist", file: `${BASE}music/Sacrifice.mp3`, cover: `${BASE}covers/Mariah.jpg` },
   { title: "Provider", artist: "Frank Ocean", file: `${BASE}music/Provider.mp3`, cover: `${BASE}covers/Frank.jpg` },
   { title: "Greedy", artist: "PARTYNEXTDOOR & Drake", file: `${BASE}music/Greedy.mp3`, cover: `${BASE}covers/PND.jpg` },
   { title: "Both Sides Of The Moon", artist: "Celeste & Gotts Street Park", file: `${BASE}music/Both Sides Of The Moon.mp3`, cover: `${BASE}covers/Celeste.jpg` },
+  { title: "Who Knows", artist: "Daniel Caesar", file: `${BASE}music/Who Knows.mp3`, cover: `${BASE}covers/WhoKnows.jpg` },
   { title: "Softly", artist: "Clairo", file: `${BASE}music/Softly.mp3`, cover: `${BASE}covers/clairo.jpg` },
-  { title: "Finest", artist: "YoungBoy Never Broke Again", file: `${BASE}music/Finest.mp3`, cover: `${BASE}covers/YB.jpg` },
   { title: "Cayendo (side A - Acoustic)", artist: "Frank Ocean", file: `${BASE}music/Cayendo (side A - Acoustic).mp3`, cover: `${BASE}covers/Franks.jpg` },
-  { title: "Oh My Baby", artist: "Babystaydown", file: `${BASE}music/Oh My Baby.mp3`, cover: `${BASE}covers/Baby.jpg` },
   { title: "Bet", artist: "Mereba", file: `${BASE}music/Bet.mp3`, cover: `${BASE}covers/Mereba.jpg` },
   { title: "N 2 Deep", artist: "Drake ft. Future", file: `${BASE}music/N 2 Deep.mp3`, cover: `${BASE}covers/Drakes.jpg` },
 ];
@@ -138,7 +137,7 @@ const rotationTracks = [
   { title: "Choosin' Texas Remix", artist: "Drake", cover: `${BASE}covers/fomo.jpg` },
   { title: "Incomplete Kisses", artist: "Sampha", cover: `${BASE}covers/sampha.jpg` },
   { title: "Forrest Gump", artist: "Frank Ocean", cover: `${BASE}covers/channelo.jpg` },
-  { title: "Gen 5", artist: "Drake", cover: `${BASE}covers/imspent.jpg` },
+  { title: "Gen 5", artist: "Drake", cover: `${BASE}covers/gen5.jpg` },
 ];
   
   const [trackIndex, setTrackIndex] = useState(0);
