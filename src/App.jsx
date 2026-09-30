@@ -116,7 +116,6 @@ function SocialLinks() {
 }
 
 function MusicWidget() {
-  const playlist = [
     const playlist = [
   { title: "Cyanide", artist: "Daniel Caesar", file: `${BASE}music/Cyanide.mp3`, cover: `${BASE}covers/DC.jpg` },
   { title: "Can I", artist: "Drake", file: `${BASE}music/Can I.mp3`, cover: `${BASE}covers/Drake.jpg` },
